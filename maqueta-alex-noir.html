@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Noir | Electronic Music</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Manrope', sans-serif; }
+    .carousel-container { position: relative; }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.08);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    .carousel-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .carousel-button.left { left: -0.5rem; }
+    .carousel-button.right { right: -0.5rem; }
+
+    .bg-radial-custom {
+      background: radial-gradient(50% 50% at 50% 50%, #171717, #080808 70%, #121212);
+    }
+
+     .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0f0f0f] via-[#1a1a1a] to-black text-white">
+
+
+
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center pt-24" style="background-image: url('./img/jdofndo.png');">
+  <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center px-4 animate-fadeIn">
+    <p class="text-xl md:text-2xl mb-6 text-gray-300">Electronic Music</p>
+  </div>
+
+  <div class="flex flex-col items-center mt-12">
+    <img src="./img/perfildemoDJ.png" alt="Perfil" class="w-36 h-36 rounded-full border-4 border-white shadow-lg mb-4 brightness-110 contrast-125">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-lg">Alex Noir</h1>
+    <p class="text-white drop-shadow-lg">Artist</p>
+    <div class="flex items-center justify-center gap-2 mb-6">
+      <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>
+      <span class="text-sm text-white drop-shadow-lg">Open Bookings</span>
+      <div class="mx-2 w-px h-4 bg-gray-600"></div>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:scale-110 transition-transform">
+          <img src="./img/icons/instagram.svg" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="#" class="hover:scale-110 transition-transform">
+          <img src="./img/icons/spotify.svg" alt="Spotify" class="w-6 h-6">
+        </a>
+        <a href="#" class="hover:scale-110 transition-transform">
+          <img src="./img/icons/soundcloud.svg" alt="SoundCloud" class="w-6 h-6">
+        </a>
+        <a href="#" class="hover:scale-110 transition-transform">
+          <img src="./img/icons/youtube.svg" alt="YouTube" class="w-6 h-6">
+        </a>
+        <a href="#" class="hover:scale-110 transition-transform">
+          <img src="./img/icons/tiktok.svg" alt="TikTok" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+    <nav class="mt-4 text-white space-x-6">
+  <a href="#" class="text-white drop-shadow-lg hover:scale-110 hover:shadow-lg transition-transform duration-300 animate-pulse">Music</a>
+  <a href="#" class="text-white drop-shadow-lg hover:scale-110 hover:shadow-lg transition-transform duration-300 animate-pulse">Tour</a>
+  <a href="#" class="text-white drop-shadow-lg hover:scale-110 hover:shadow-lg transition-transform duration-300 animate-pulse">Live Sets</a>
+  <a href="#" class="text-white drop-shadow-lg hover:scale-110 hover:shadow-lg transition-transform duration-300 animate-pulse">Interviews</a>
+  <a href="#" class="text-white drop-shadow-lg hover:scale-110 hover:shadow-lg transition-transform duration-300 animate-pulse">Bio</a>
+</nav>
+
+  </div>
+</section>
+
+  <div class="bg-radial-custom">
+
+<!-- Carrusel: Últimos Lanzamientos usando Swiper -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<section class="py-16 px-4" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-4">Últimos Lanzamientos</h2>
+  <p class="text-center text-gray-400 mb-8">Listen to the latest tracks</p>
+
+  <div class="swiper mySwiper-releases mx-auto max-w-6xl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide min-w-[150px] bg-[#181818] p-4 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/release1.png" alt="Midnight Signals" class="mb-3 rounded">
+        <h3 class="text-lg font-semibold">Midnight Signals</h3>
+        <p class="text-gray-400 text-sm">Alex Noir ft. Luna Wave</p>
+      </div>
+      <div class="swiper-slide min-w-[150px] bg-[#1c1c1c] p-4 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/release2.png" alt="Echoes of Infinity" class="mb-3 rounded">
+        <h3 class="text-lg font-semibold">Echoes of Infinity</h3>
+        <p class="text-gray-400 text-sm">Alex Noir</p>
+      </div>
+      <div class="swiper-slide min-w-[150px] bg-[#1c1c1c] p-4 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/release3.png" alt="Neon Dreams" class="mb-3 rounded">
+        <h3 class="text-lg font-semibold">Neon Dreams</h3>
+        <p class="text-gray-400 text-sm">Alex Noir</p>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev">
+  
+</div>
+<div class="swiper-button-next">
+  
+</div>
+
+  </div>
+</section>
+
+<!-- Carrusel: Próximos Eventos usando Swiper -->
+<section class="py-16 px-4" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-4">Próximos Eventos</h2>
+  <p class="text-center text-gray-400 mb-8">Join the experience</p>
+
+  <div class="swiper mySwiper-events mx-auto max-w-6xl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow border border-white/10">
+        <h3 class="text-xl font-semibold text-black">10 Jun - SANITY</h3>
+        <p class="text-gray-800">Pacha Barcelona</p>
+        <a href="#" class="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-teal-500 to-gray-500 text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300">Tickets</a>
+      </div>
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow border border-white/10">
+        <h3 class="text-xl font-semibold text-black">14 Jun - WAVY</h3>
+        <p class="text-gray-800">Later Aan Zee, Netherlands</p>
+        <a href="#" class="inline-block mt-4 px-4 py-2 bg-gradient-to-r from-teal-500 to-gray-500 text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300">Tickets</a>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- Carrusel: Sets en Vivo usando Swiper -->
+<section class="py-16 px-4" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-4">Sets en Vivo</h2>
+  <p class="text-center text-gray-400 mb-8">Recorded live on stage</p>
+
+  <div class="swiper mySwiper-sets mx-auto max-w-6xl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide min-w-[300px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/tulumSet1.png" alt="La Fábrica" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-semibold mb-2 text-white">Tech House Sunset Mix</h3>
+        <p class="text-gray-400 mb-4">Tulum, Mexico</p>
+      </div>
+      <div class="swiper-slide min-w-[300px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/la-fabrica.png" alt="La Fábrica" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-semibold mb-2 text-white">La Fábrica</h3>
+        <p class="text-gray-400 mb-4">Córdoba, Argentina</p>
+      </div>
+      <div class="swiper-slide min-w-[300px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/la-fabrica.png" alt="La Fábrica" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-semibold mb-2 text-white">La Fábrica</h3>
+        <p class="text-gray-400 mb-4">Córdoba, Argentina</p>
+      </div>
+      <div class="swiper-slide min-w-[300px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <img src="./img/tulumSet1.png" alt="La Fábrica" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-semibold mb-2 text-white">Tech House Sunset Mix</h3>
+        <p class="text-gray-400 mb-4">Tulum, Mexico</p>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+
+<!-- Carrusel: Entrevistas usando Swiper -->
+<section class="py-16 px-4" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-4">Entrevistas</h2>
+  <p class="text-center text-gray-400 mb-8">Behind the music</p>
+
+  <div class="swiper mySwiper-interviews mx-auto max-w-6xl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide min-w-[280px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <h3 class="text-xl font-semibold mb-2">BOMBO</h3>
+        <a href="#" class="text-teal-400 hover:underline">Leer Entrevista</a>
+      </div>
+      <div class="swiper-slide min-w-[280px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <h3 class="text-xl font-semibold mb-2">DROPS</h3>
+        <a href="#" class="text-teal-400 hover:underline">Leer Entrevista</a>
+      </div>
+      <div class="swiper-slide min-w-[280px] bg-[#1c1c1c] p-6 rounded-2xl shadow-md border border-white/10">
+        <h3 class="text-xl font-semibold mb-2">QDEL</h3>
+        <a href="#" class="text-teal-400 hover:underline">Leer Entrevista</a>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+  </div>
+
+   <!-- Contacto -->
+   <section class="py-16 px-4 bg-[#111111]">
+    <h2 class="text-4xl font-bold text-center mb-4">Contacto</h2>
+    <p class="text-center text-gray-400 mb-8">Get in touch for bookings or collaborations</p>
+    <div class="max-w-xl mx-auto text-center text-gray-300 space-y-4">
+      <p><strong>Europa:</strong> <a href="mailto:bookings@alexnoir.com" class="text-teal-400 hover:underline">bookings@alexnoir.com</a></p>
+      <p><strong>USA:</strong> <a href="mailto:us@alexnoir.com" class="text-teal-400 hover:underline">us@alexnoir.com</a></p>
+      <p><strong>LATAM:</strong> <a href="mailto:latam@alexnoir.com" class="text-teal-400 hover:underline">latam@alexnoir.com</a></p>
+    </div>
+  </section>
+
+  <script>
+     AOS.init();
+
+  const options = {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2,
+      },
+      1024: {
+        slidesPerView: 3.5,
+      },
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  };
+
+  new Swiper(".mySwiper-releases", options);
+  new Swiper(".mySwiper-events", options);
+  new Swiper(".mySwiper-sets", options);
+  new Swiper(".mySwiper-interviews", options);
+  </script>
+
+</body>
+</html>
